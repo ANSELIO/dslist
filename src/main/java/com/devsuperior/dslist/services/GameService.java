@@ -33,6 +33,7 @@ public class GameService {
 	public List<GameMinDTO> findByList(Long listId){
 		List<GameMinProjection> result = gameRepository.searchByList(listId);
 		return result.stream().map(x -> new GameMinDTO(x)).toList();
+		
   }
 
 }
